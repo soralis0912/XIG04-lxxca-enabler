@@ -1,4 +1,4 @@
-package org.soralis_0912.xig04.lenabler;
+package org.soralis_0912.xig04.lxxcaenabler;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XC_MethodHook;

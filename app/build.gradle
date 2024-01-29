@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'org.soralis_0912.xig04.lenabler'
+    namespace 'org.soralis_0912.xig04.lxxcaenabler'
     compileSdk 33
 
     defaultConfig {
