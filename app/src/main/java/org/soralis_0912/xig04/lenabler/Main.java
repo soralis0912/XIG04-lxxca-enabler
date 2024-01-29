@@ -24,6 +24,10 @@ public class Main implements IXposedHookLoadPackage {
                 if (key == "ro.boot.product.theme_customize") {
                     param.setResult("");
                 }
+                
+                if (key == "ro.boot.camera.config") {
+                    param.setResult("1");
+                }
             }
         });
     }
