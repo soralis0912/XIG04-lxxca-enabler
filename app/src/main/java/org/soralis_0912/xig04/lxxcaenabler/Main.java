@@ -25,21 +25,25 @@ public class Main implements IXposedHookLoadPackage {
                 if (key == "ro.boot.product.theme_customize") {
                     param.setResult("");
                 }
-                
                 if (key == "ro.boot.camera.config") {
                     param.setResult("1");
                 }
-
                 if (key == "ro.boot.hwc") {
                     param.setResult("IN");
                 }
-
                 if (key == "ro.product.mod_device") {
                     param.setResult("aristotle_global");
                 }
                 if (key == "ro.product.name") {
                     param.setResult("aristotle");
                 }
+                if (key == "ro.miui.customized.region") {
+                    param.setResult("");
+                }
+                if (key == "ro.miui.region") {
+                    param.setResult("IN");
+                }
+                
             }
         });
     }
