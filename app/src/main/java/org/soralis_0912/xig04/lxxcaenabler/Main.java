@@ -15,6 +15,7 @@ public class Main implements IXposedHookLoadPackage {
         }
 
         XposedHelpers.findField(Build.class, "MODEL").set(null, "aristotle");
+        XposedHelpers.findField(Build.class, "DEVICE").set(null, "aristotle");
 
         XposedHelpers.findAndHookMethod(XposedHelpers.findClass("android.os.SystemProperties", lpparam.classLoader), "native_get", String.class, String.class, new XC_MethodHook() {
             @Override
@@ -27,6 +28,17 @@ public class Main implements IXposedHookLoadPackage {
                 
                 if (key == "ro.boot.camera.config") {
                     param.setResult("1");
+                }
+
+                if (key == "ro.boot.hwc") {
+                    param.setResult("IN");
+                }
+
+                if (key == "ro.product.mod_device") {
+                    param.setResult("aristotle_global");
+                }
+                if (key == "ro.product.name") {
+                    param.setResult("aristotle");
                 }
             }
         });
